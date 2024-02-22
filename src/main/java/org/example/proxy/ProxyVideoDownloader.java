@@ -20,7 +20,17 @@ public class ProxyVideoDownloader implements VideoDownloader{
 
 /*
 This pattern is particularly used heavily in Spring AOP. As an example, In Spring AOP you create proxies of the objects that handle the cross cutting concern code.
-The Proxy pattern also forms the core foundation of remoting technologies that Spring supports, such as RMI, Spring’s HTTP Invoker, Hessian, and Burlap.
+One of the most common examples of the Proxy pattern in Spring is the use of dynamic proxies to provide declarative transaction management for methods in a service layer.
+Here is an example of how we can use Spring’s transaction management using dynamic proxies:
+
+@Transactional
+public void updateEmployee(Employee employee) {
+    employeeDao.update(employee);
+}
+In the above example, the @Transactional annotation tells Spring to apply transaction management to the updateEmployee() method.
+When this method is invoked, Spring creates a dynamic proxy object that intercepts the method call and performs the necessary transaction management operations,
+ such as beginning a transaction, committing the transaction, or rolling back the transaction if an exception occurs.
+
  */
 
 /*
